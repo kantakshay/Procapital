@@ -8,90 +8,89 @@
 body {
   font-family: "Ubuntu", sans-serif;
 }
+.background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
 #particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(15, 34, 94);
-    z-index: 0;
-    /* background-image: url("");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 50% 50%; */
-  }
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #e6e6fa;
+  z-index: 0;
+}
+
 .navbar {
-  background-color: #f2f4f634;
   position: absolute;
   text-align: center;
   top: 5%;
   width: 100%;
-  z-index: 1; 
+  z-index: 1;
 }
 .nav-link {
-  color: #ffffff;
+  color: #000000;
   font-size: 20px;
   font-weight: bold;
 }
 .nav-item {
-    background-color: transparent;
-    margin: 0 5px;
-    border-radius: 10px;
-    transition: background-color 0.3s; /* Adding a smooth transition effect */
+  background-color: transparent;
+  margin: 0 5px;
+  border-radius: 10px;
+  transition: background-color 0.3s; /* Adding a smooth transition effect */
 }
-
+ul.navbar-nav li.nav-item {
+  background-color: #34006f5b;
+}
 ul.navbar-nav li.nav-item:hover {
-    background-color: rgb(146, 226, 249);
-    border-radius: 10px;
+  background-color: #e6e6fa5b;
+  border-radius: 10px;
 }
-ul.navbar-nav li.nav-item:active{
-    transform: scale(0.8);
-    box-shadow: 0 0 5px black;
-
+ul.navbar-nav li.nav-item:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
 }
-
-.intro {
+#intro {
   position: absolute;
-  height: 600px;
-  left: 0;
-  right: 0;
-  color: aliceblue;
+  top: 10%;
+  z-index: 2;
   display: flex;
-z-index: 1;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  color: #33006f;
   margin-top: 80px;
 }
-.intro-text {
-    font-size: clamp(2px,5vh,20px);
-    font-weight: bold;
-  padding: 80px 0 0 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
-  }
-.intro-img {
-    display: flex;
-    justify-content: center;
-
-}
-#contact,
+#about-us,
 #services,
-#about-me {
- 
-    z-index: 2;
+#pricing,
+#contact {
+  z-index: 3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(249, 249, 250);
-  padding-bottom: 20px;
-  color: #080808;
+  background-color: #e6e6fa5b;
+  padding: 60px 20px;
+  color: #33006f;
+  font-weight: bold;
 }
-.about {
-  padding: 40px;
-  background-color: rgba(133, 242, 246, 0.301);
+
+.intro-text {
+  font-size: clamp(2px, 5vh, 20px);
+  font-weight: bold;
+  padding: 80px 0 0 80px;
+  text-align: center;
 }
+.intro-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
 .side-heading {
   font-size: clamp(30px, 6vh, 40px);
   font-weight: bold;
@@ -112,21 +111,27 @@ z-index: 1;
   width: 80%;
 }
 
-.services-stack {
+.services-para {
+  text-align: center;
+}
+.services-stack,.plans-stack {
   display: flex;
   flex-direction: row;
 }
 .services-container {
   position: relative;
   width: 30vw;
-  background-color: rgba(85, 223, 241, 0.247);
+  background-color: #e6e6fa;
   border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(253, 253, 253, 0.411),
-    0 6px 20px 0 rgba(253, 252, 252, 0.295);
+  box-shadow: 0 4px 8px 0 #34006f5b, 0 6px 15px 0 #34006f5b;
   margin: 8px 8px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  letter-spacing: 1px;
+  font-size: 20px;
+  text-shadow: 0 0 2px #4400ff;
+  padding: 10px 15px;
 }
 .services-image {
   display: block;
@@ -144,8 +149,8 @@ z-index: 1;
   width: 100%;
   height: 0;
   transition: 0.5s ease;
-  background-color: rgb(15, 34, 94);
-  background-image: url(./images/gulf-cool-background.svg);
+  background-color: #34006f5b;
+  background-image: url(./images/Meteor.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -156,8 +161,10 @@ z-index: 1;
 }
 
 .services-text {
-  color: rgb(255, 255, 255);
-  font-size: 14px;
+  color: #00ffffc5;
+  text-shadow: 0 0 3px #4400ff;
+  letter-spacing: 1px;
+  font-size: 12px;
   font-weight: bold;
   position: absolute;
   top: 50%;
@@ -167,12 +174,70 @@ z-index: 1;
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.contact-icons {
-  width: 60px;
+.plans-stack{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.plans-color-dr{
+  background-color: #D8BFD8;
+}
+.plans-color-lg{
+  background-color: #e6e6fa;
+}
+.plans{
+  width: 26vw;
+  margin: 20px 50px;
+color: #000000;
+  border-radius: 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 #34006f5b, 0 6px 15px 0 #34006f5b;
+
+}
+.plans-heading{
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+font-size: 25px;
+}
+
+.plans>img{
+  width: 150px;
+}
+.features-stack{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px 0px;
+
+}
+.features-stack>ul{
+list-style: none;
+}
+.features-stack>ul>li{
+  margin: 2px 0;
+}
+.features-stack>ul>li>i{
+margin-right: 5px;
+}
+.features-stack-btn{
+  padding: 5px 10px;
+  background-color: #34006f5b;
+color: #000000;
+font-size: 18px;
+font-weight: bold;
+  border-radius: 5px;
+}
+.icon {
+  font-size: 35px;
+  color: #33006f;
+  margin: 0 5px;
 }
 .contact-icon-way > a {
   display: flex;
-  flex-direction: row;
   align-items: center;
   margin-bottom: 20px;
   text-decoration: none;
@@ -180,41 +245,19 @@ z-index: 1;
 }
 .contact-icon-way > a:hover {
   cursor: pointer;
-  color: #204849;
+  color: #33006f;
 }
-.contact-icon-way > a > img {
-  margin-right: 10px;
-}
-.message {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+
 .contact-t {
   font-size: clamp(6px, 6vh, 12px);
   font-weight: bold;
   letter-spacing: 2px;
 }
-.inputs {
-  margin-bottom: 10px;
-  border: 2px solid #204849;
-  padding: 5px;
-}
-.button {
-  padding: 10px 20px;
-  background-color: #204849;
-  color: aliceblue;
-  font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  border: 1px solid aliceblue;
-  border-radius: 5%;
-}
-.button:hover {
-  cursor: pointer;
-  color: #204849;
-  background-color: aliceblue;
-  border: 1px solid #204849;
+
+.map-frame{
+  border: 5px solid #33006f;
+  border-radius: 20px;
+  width:100%;
 }
 
 @media only screen and (max-width: 468px) {
