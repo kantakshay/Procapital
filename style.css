@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Ubuntu:wght@300&display=swap');
 
 * {
   margin: 0;
@@ -13,6 +13,8 @@ body {
   width: 100%;
   height: 100vh;
   z-index: 0;
+  box-shadow: 0px 15px 10px -15px #111; 
+
 }
 
 #particles-js {
@@ -26,7 +28,7 @@ body {
 .navbar {
   position: absolute;
   text-align: center;
-  top: 5%;
+  top: 0;
   width: 100%;
   z-index: 1;
 }
@@ -52,18 +54,29 @@ ul.navbar-nav li.nav-item:active {
   transform: scale(0.8);
   box-shadow: 0 0 5px black;
 }
+.logo-img{
+  width: 250px;
+}
 #intro {
   position: absolute;
   top: 10%;
   z-index: 2;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #33006f;
-  margin-top: 80px;
+  margin-top: 200px;
 }
-
+.intro-side-heading{
+  font-size: 40px;
+  font-weight: bold;
+}
+.intro-heading{
+  font-size: 60px;
+  font-weight: bold;
+  text-shadow: 0 0 2px #4400ff;
+}
 #about-us,
 #services,
 #pricing,
@@ -187,7 +200,7 @@ ul.navbar-nav li.nav-item:active {
 }
 .plans{
   width: 26vw;
-  margin: 20px 50px;
+  margin: 20px 40px;
 color: #000000;
   border-radius: 10px;
   padding: 20px 15px;
@@ -198,9 +211,11 @@ color: #000000;
 
 }
 .plans-heading{
+  font-family: 'Roboto Slab', serif;
   text-align: center;
   font-weight: bold;
   margin: 10px 0;
+  color: #33006f;
 font-size: 25px;
 }
 
@@ -214,6 +229,24 @@ font-size: 25px;
   padding: 10px 0px;
 
 }
+.plans-fe-heading{
+  font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4400ff;
+}
+.prices-on{
+  font-family: 'Roboto Slab', serif;
+color: #1d1160;
+font-weight: bolder;
+font-size: 30px;
+}
+.prices-off{
+  font-family: 'Roboto Slab', serif;
+  font-weight: bolder;
+  font-size: 20px;
+  margin: 10px 0;
+}
 .features-stack>ul{
 list-style: none;
 }
@@ -222,6 +255,7 @@ list-style: none;
 }
 .features-stack>ul>li>i{
 margin-right: 5px;
+color: green;
 }
 .features-stack-btn{
   padding: 5px 10px;
@@ -291,7 +325,7 @@ font-weight: bold;
   }
   .tech-icon {
     width: 20%;
-    margin: 5px;
+    margin: 5px 0;
   }
   .tech-stack-icon {
     display: flex;
